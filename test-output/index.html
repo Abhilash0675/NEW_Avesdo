@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Sales_Module" class="panel Sales_Module">
+        </div> <!-- panel Sales_Module -->
+        <div panel-name="test-xml-Sales_Module" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Automation\Avesdo\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Sales Module&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.avesdo.tests.utils.listeners.TestListener&quot;/&gt;
+    &lt;listener class-name=&quot;com.avesdo.tests.utils.listeners.AnnotationTransformer&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;2&quot; name=&quot;Chrome Based&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.avesdo.tests.cases.TestAddStaff&quot;&gt;
+        &lt;parameter name=&quot;execution&quot; value=&quot;Mandatory&quot;/&gt;
+      &lt;/class&gt; &lt;!-- com.avesdo.tests.cases.TestAddStaff --&gt;
+      &lt;class name=&quot;com.avesdo.tests.cases.TestCreateNewDeal&quot;&gt;
+        &lt;parameter name=&quot;execution&quot; value=&quot;Mandatory&quot;/&gt;
+      &lt;/class&gt; &lt;!-- com.avesdo.tests.cases.TestCreateNewDeal --&gt;
+      &lt;class name=&quot;com.avesdo.tests.cases.TestBuyerSignDeal&quot;&gt;
+        &lt;parameter name=&quot;execution&quot; value=&quot;Mandatory&quot;/&gt;
+        &lt;parameter name=&quot;sheet&quot; value=&quot;Login Buyer 1&quot;/&gt;
+      &lt;/class&gt; &lt;!-- com.avesdo.tests.cases.TestBuyerSignDeal --&gt;
+      &lt;class name=&quot;com.avesdo.tests.cases.TestBuyerSignDeal&quot;&gt;
+        &lt;parameter name=&quot;execution&quot; value=&quot;Mandatory&quot;/&gt;
+        &lt;parameter name=&quot;sheet&quot; value=&quot;Login Buyer 2&quot;/&gt;
+      &lt;/class&gt; &lt;!-- com.avesdo.tests.cases.TestBuyerSignDeal --&gt;
+      &lt;class name=&quot;com.avesdo.tests.cases.TestRealtorSignDeal&quot;&gt;
+        &lt;parameter name=&quot;execution&quot; value=&quot;Mandatory&quot;/&gt;
+      &lt;/class&gt; &lt;!-- com.avesdo.tests.cases.TestRealtorSignDeal --&gt;
+      &lt;class name=&quot;com.avesdo.tests.cases.TestSalesAdminVerifyDeal&quot;&gt;
+        &lt;parameter name=&quot;execution&quot; value=&quot;Mandatory&quot;/&gt;
+      &lt;/class&gt; &lt;!-- com.avesdo.tests.cases.TestSalesAdminVerifyDeal --&gt;
+      &lt;class name=&quot;com.avesdo.tests.cases.TestSalesUserCreateContact&quot;&gt;
+        &lt;parameter name=&quot;execution&quot; value=&quot;Mandatory&quot;/&gt;
+      &lt;/class&gt; &lt;!-- com.avesdo.tests.cases.TestSalesUserCreateContact --&gt;
+      &lt;class name=&quot;com.avesdo.tests.cases.TestAllocateUnitUsingLeftClick&quot;&gt;
+        &lt;parameter name=&quot;execution&quot; value=&quot;Mandatory&quot;/&gt;
+      &lt;/class&gt; &lt;!-- com.avesdo.tests.cases.TestAllocateUnitUsingLeftClick --&gt;
+      &lt;class name=&quot;com.avesdo.tests.cases.TestAllocateUnitUsingRightClick&quot;&gt;
+        &lt;parameter name=&quot;execution&quot; value=&quot;Mandatory&quot;/&gt;
+      &lt;/class&gt; &lt;!-- com.avesdo.tests.cases.TestAllocateUnitUsingRightClick --&gt;
+      &lt;class name=&quot;com.avesdo.tests.cases.TestUnAllocateUnitUsingRightClick&quot;&gt;
+        &lt;parameter name=&quot;execution&quot; value=&quot;Mandatory&quot;/&gt;
+      &lt;/class&gt; &lt;!-- com.avesdo.tests.cases.TestUnAllocateUnitUsingRightClick --&gt;
+      &lt;class name=&quot;com.avesdo.tests.cases.TestMasterReportDownload&quot;&gt;
+        &lt;parameter name=&quot;execution&quot; value=&quot;Mandatory&quot;/&gt;
+      &lt;/class&gt; &lt;!-- com.avesdo.tests.cases.TestMasterReportDownload --&gt;
+      &lt;class name=&quot;com.avesdo.tests.cases.TestListUnitPublicUsingRightClick&quot;&gt;
+        &lt;parameter name=&quot;execution&quot; value=&quot;Mandatory&quot;/&gt;
+      &lt;/class&gt; &lt;!-- com.avesdo.tests.cases.TestListUnitPublicUsingRightClick --&gt;
+      &lt;class name=&quot;com.avesdo.tests.cases.TestListUnitPrivateUsingRightClick&quot;&gt;
+        &lt;parameter name=&quot;execution&quot; value=&quot;Mandatory&quot;/&gt;
+      &lt;/class&gt; &lt;!-- com.avesdo.tests.cases.TestListUnitPrivateUsingRightClick --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Chrome Based --&gt;
+&lt;/suite&gt; &lt;!-- Sales Module --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Sales_Module" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Sales Module</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Chrome Based (13 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Sales_Module" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Sales Module</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Sales_Module" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Sales Module</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Sales_Module');
+function tableData_Sales_Module() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(0);
+window.suiteTableData['Sales_Module']= { tableData: data, tableDiv: 'times-div-Sales_Module'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 0 ms</span>
+              <div id="times-div-Sales_Module">
+              </div> <!-- times-div-Sales_Module -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Sales_Module" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Sales Module</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Sales_Module" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">11 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.avesdo.tests.cases.TestRealtorSignDeal</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">email</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.avesdo.tests.cases.TestUnAllocateUnitUsingRightClick</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">email</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.avesdo.tests.cases.TestListUnitPublicUsingRightClick</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">email</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.avesdo.tests.cases.TestBuyerSignDeal</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">email</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.avesdo.tests.cases.TestMasterReportDownload</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">email</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.avesdo.tests.cases.TestSalesUserCreateContact</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">email</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.avesdo.tests.cases.TestListUnitPrivateUsingRightClick</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">email</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.avesdo.tests.cases.TestAllocateUnitUsingRightClick</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">email</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.avesdo.tests.cases.TestCreateNewDeal</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">email</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.avesdo.tests.cases.TestAllocateUnitUsingLeftClick</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">email</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.avesdo.tests.cases.TestSalesAdminVerifyDeal</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">email</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Sales_Module" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avesdo.tests.cases.TestAddStaff</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">initialize(Chrome, Mandatory)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">login</span>
+                <span class="method-start">61 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-suite after">
+                <span class="method-name">email</span>
+                <span class="method-start">567 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
